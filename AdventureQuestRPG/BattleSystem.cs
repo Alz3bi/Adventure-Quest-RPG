@@ -8,7 +8,7 @@ namespace AdventureQuestRPG
 {
     public class BattleSystem
     {
-        public string Attack(Character attacker, Character target)
+        public string Attack(IBattleStates attacker, IBattleStates target)
         {
             int damage = Math.Max(0, attacker.AttackPower - target.Defense);
             target.TakeDamage(damage);

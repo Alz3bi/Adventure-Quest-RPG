@@ -1,6 +1,6 @@
 # AdventureQuestRPG
 
-AdventureQuestRPG is a simple console-based role-playing game (RPG) where players can engage in battles with various monsters. The game is built using C# and demonstrates basic object-oriented programming concepts such as inheritance, polymorphism, and encapsulation.
+AdventureQuestRPG is a simple console-based role-playing game (RPG) where players can engage in battles with various monsters. The game is built using C# and demonstrates basic object-oriented programming concepts such as inheritance, polymorphism, encapsulation and interface implementation.
 
 ## Getting Started
 

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace AdventureQuestRPG
 {
-    public class Character
+    public class Character : IBattleStates
     {
         public string Name { get; set; }
-        public int Health { get; private set; }
-        public int AttackPower { get; private set; }
-        public int Defense { get; private set; }
+        public int Health { get; set; }
+        public int AttackPower { get; set; }
+        public int Defense { get; set; }
         public Character(string name)
         {
             Name = name;
@@ -28,7 +28,7 @@ namespace AdventureQuestRPG
             Health = Math.Max(0, Health - damage);
         }
     }
-    public class Player : Character
+    public class Player : Character 
     {
         public Player(string name) : base(name)
         {
