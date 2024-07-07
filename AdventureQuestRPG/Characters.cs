@@ -49,5 +49,12 @@ namespace AdventureQuestRPG
             SetStats(50, 15, 3);
         }
     }
+    public class BossMonster : Monster
+    {
+        public BossMonster(string name) : base(name)
+        {
+            SetStats(200, 20, 10);
+        }
+    }
 }
 

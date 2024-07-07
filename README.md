@@ -45,6 +45,7 @@ In AdventureQuestRPG, players take on the role of a hero battling against variou
 
 - **Player**: Represents the hero controlled by the user.
 - **Wizard**: A type of monster that the player can battle against.
+- **BossMonster**: A formidable opponent with higher health, attack power, and defense compared to regular monsters.
 
 ### Battle System
 
