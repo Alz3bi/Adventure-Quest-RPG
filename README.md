@@ -51,6 +51,10 @@ In AdventureQuestRPG, players take on the role of a hero battling against variou
 
 The `BattleSystem` class handles the logic for battles between the player and monsters. It supports basic actions such as attacking and determining the outcome of battles.
 
+### Exploration and Game Progression
+
+Players can explore different locations within the game world. Each location may contain monsters that the player can encounter and battle. Winning battles against monsters allows the player to gain experience points (XP), restore health, and potentially find items. The game tracks the player's progress, including explored locations and defeated monsters.
+
 ## Testing
 
 The project includes a set of unit tests to verify the functionality of the battle system. These tests are located in the `AdventureQuestRPGTests` project.

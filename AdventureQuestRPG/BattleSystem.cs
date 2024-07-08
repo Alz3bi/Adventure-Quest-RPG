@@ -15,7 +15,7 @@ namespace AdventureQuestRPG
             Console.WriteLine($"{attacker.Name} attacks {target.Name} for {damage} damage! {target.Name} Health: {target.Health}");
             return "Attack Complete!";
         }
-        public int StartBattle(Character player, Monster enemy)
+        public int StartBattle(Player player, Monster enemy)
         {
             while(player.Health > 0 && enemy.Health > 0)
             {
@@ -24,17 +24,26 @@ namespace AdventureQuestRPG
                 Console.WriteLine(Attack(player, enemy));
                 if(enemy.Health <= 0)
                 {
-                    Console.WriteLine("Player Wins");
-                    return player.Health;
+                    Console.WriteLine($"You defeated the {enemy.Name}");
+                    string continueText = "press any key to continue...";
+                    Console.WriteLine(continueText);
+                    Console.ReadKey();
+                    player.restoreHealth();
+                    player.GainXP(enemy.DefeatXp);
+                    return 1;
                 }
                 Console.WriteLine();
                 Console.WriteLine("enemy turn");
                 Console.WriteLine(Attack(enemy,player));
                 if (player.Health <= 0)
                 {
-                    Console.WriteLine("Enemy Wins");
-                    return enemy.Health;
+                    Console.WriteLine($"You were defeated by {enemy.Name}");
+                    string continueText = "press any key to continue...";
+                    Console.WriteLine(continueText);
+                    Console.ReadKey();
+                    return 0;
                 }
+                
             }
             return 1;
         }
