@@ -1,6 +1,6 @@
 # AdventureQuestRPG
 
-AdventureQuestRPG is a simple console-based role-playing game (RPG) where players can engage in battles with various monsters. The game is built using C# and demonstrates basic object-oriented programming concepts such as inheritance, polymorphism, and encapsulation.
+AdventureQuestRPG is a simple console-based role-playing game (RPG) where players can engage in battles with various monsters. The game is built using C# and demonstrates basic object-oriented programming concepts such as inheritance, polymorphism, encapsulation and interface implementation.
 
 ## Getting Started
 
@@ -45,10 +45,15 @@ In AdventureQuestRPG, players take on the role of a hero battling against variou
 
 - **Player**: Represents the hero controlled by the user.
 - **Wizard**: A type of monster that the player can battle against.
+- **BossMonster**: A formidable opponent with higher health, attack power, and defense compared to regular monsters.
 
 ### Battle System
 
 The `BattleSystem` class handles the logic for battles between the player and monsters. It supports basic actions such as attacking and determining the outcome of battles.
+
+### Exploration and Game Progression
+
+Players can explore different locations within the game world. Each location may contain monsters that the player can encounter and battle. Winning battles against monsters allows the player to gain experience points (XP), restore health, and potentially find items. The game tracks the player's progress, including explored locations and defeated monsters.
 
 ## Testing
 
