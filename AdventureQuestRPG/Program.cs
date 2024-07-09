@@ -71,7 +71,8 @@
         public static void LoadGame()
         {
             Console.Clear();
-            Console.WriteLine("Loading Game...");
+            Console.WriteLine("This feature is only available to VIP players");
+            Console.WriteLine("to get a VIP ticket contact me on EMAIL");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }

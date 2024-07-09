@@ -30,6 +30,7 @@ namespace AdventureQuestRPG
                     Console.ReadKey();
                     player.restoreHealth();
                     player.GainXP(enemy.DefeatXp);
+                    DropLoot(player, enemy);
                     return 1;
                 }
                 Console.WriteLine();
@@ -46,6 +47,39 @@ namespace AdventureQuestRPG
                 
             }
             return 1;
+        }
+        public void DropLoot(Player player,Monster enemy)
+        {
+            Random rand = new Random();
+            int dropChance = rand.Next(1, 101);
+            if(dropChance <= enemy.DropChance)
+            {
+                int lootChance = rand.Next(1, 101);
+                if(lootChance <= 50)
+                {
+                    Console.Clear();
+                    player.Inventory.AddItem(new Weapon("Sword", "A basic sword", 10));
+                    Console.WriteLine("You found a sword!");
+                    Console.WriteLine("press any key to continue...");
+                    Console.ReadKey();
+                }   
+                else if(lootChance <= 75)
+                {
+                    Console.Clear();
+                    player.Inventory.AddItem(new Armor("Shield", "A basic shield", 5));
+                    Console.WriteLine("You found a shield!");
+                    Console.WriteLine("press any key to continue...");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.Clear();
+                    player.Inventory.AddItem(new Consumable("Potion", "A basic potion", 10));
+                    Console.WriteLine("You found a potion!");
+                    Console.WriteLine("press any key to continue...");
+                    Console.ReadKey();
+                }
+            }
         }
 
 
